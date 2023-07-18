@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feliz Cumpleaños Xime</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #ff00ff;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    p {
+      font-size: 18px;
+      margin-bottom: 5px;
+      line-height: 1.5;
+      color: #00ff00;
+    }
+    
+    .message {
+      margin-bottom: 10px;
+    }
+    
+    #gift-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    
+    #gift-wrap {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('gift-wrap.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    #gift-container.opened #gift-wrap {
+      transform: rotateX(90deg);
+    }
+    
+    #gift-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    #video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: none;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 400px;
+    }
+    
+    #otter-gif {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 150px;
+      filter: brightness(150%);
+    }
+    
+    #otter-gif-new {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+      filter: brightness(150%);
+    }
+    
+    #otter-gif-bottom {
+      margin-top: 20px;
+      filter: brightness(150%);
+    }
+    
+    .colorful-text {
+      color: #00ff00;
+    }
+    
+    #gift-container:hover {
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    }
+    
+    #video-container {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
+    
+    #video-container a {
+      color: #00ff00;
+      text-decoration: none;
+    }
+    
+    #video-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function revealVideo() {
+      var giftContainer = document.getElementById('gift-container');
+      var videoContainer = document.getElementById('video-container');
+      var giftContent = document.getElementById('gift-content');
+
+      giftContainer.style.display = 'none'; // Oculta el cuadro del regalo
+      videoContainer.style.display = 'block'; // Muestra el contenedor del video
+    }
+  </script>
+</head>
+<body>
+  <h1>¡Feliz Cumpleaños, Xime!</h1>
+  
+  <img id="otter-gif" src="https://media.tenor.com/jD9oR64srv8AAAAi/otter-love.gif" alt="GIF de nutria">
+  
+  <div class="message">
+    <p class="colorful-text"><strong>Querida Xime,</strong></p>
+    <p class="colorful-text" style="margin-bottom: 5px;">En tu cumpleaños, queremos desearte un día lleno de alegría y amor. ¡Que tengas un año increíble!</p>
+  </div>
+  
+  <img id="otter-gif-new" src="https://media.tenor.com/A7HZmSx-ZlgAAAAi/otter-sleep.gif" alt="GIF de nutria" style="position: absolute; top: 0; left: 0; width: 150px; height: 150px; filter: brightness(150%);">
+  
+  <div id="gift-container" onclick="revealVideo()">
+    <div id="gift-wrap"></div>
+    <div id="gift-content">
+      <div id="gif-container">
+        <img src="https://media.tenor.com/ycakT-72TBMAAAAj/present-gift.gif" alt="GIF de regalo sorprendente">
+      </div>
+    </div>
+  </div>
+  
+  <div id="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/k58NntoMM6o" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <img id="otter-gif-bottom" src="https://media.tenor.com/qsYTRN29JykAAAAi/otter-love.gif" alt="GIF de nutria">
+  
+</body>
+</html>
